@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <h1>IP Address Tracker</h1>
+        <div class="input__container">
+          <label for="search">Search for any IP address or domain</label>
+          <input type="text" name="search" id="search" />
+          <button type="submit"><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </header>
+    <div id="mapid"></div>
+    <main>
+      <div class="main__container">
+        <section class="ip__address">
+          <p class="section__p__heading">IP Address</p>
+          <p id="ip"></p>
+        </section>
+        <section class="location">
+          <p class="section__p__heading">Location</p>
+          <p id="location"></p>
+        </section>
+        <section class="timezone">
+          <p class="section__p__heading">Timezone</p>
+          <p id="timezone"></p>
+        </section>
+        <section class="isp">
+          <p class="section__p__heading">ISP</p>
+          <p id="isp"></p>
+        </section>
+      </div>
+    </main>
+    <!-- add offset value dynamically using the API -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Dilara Aksoy</a>.
+    </div>
+    <div class="modal"><i class="close fas"></i></div>
+    <div class="overlay"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

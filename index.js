@@ -39,7 +39,6 @@ const ip_getter = async () => {
     location__text.textContent = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
     timezone__text.textContent = `UTC ${data.location.timezone}`;
     isp__text.textContent = data.isp;
-    console.log(data.domains);
     L.tileLayer(
       'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=sk.eyJ1IjoiZGlsYXJhMjYiLCJhIjoiY2ttaTNrdWk1MGRkZjJwcTRpY29ibXIzNCJ9.xwEFwyG8Pru6CPBwpUBEEQ',
       {
